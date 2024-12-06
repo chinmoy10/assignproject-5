@@ -24,6 +24,19 @@ const donateFlood = document.getElementById('donate-flood').addEventListener('cl
 
     document.getElementById("donate-flood-input").value = "";
 
+    const div = document.createElement('div');
+        div.classList.add("border-2", "p-5", 'rounded-2xl', 'space-y-1');
+        div.innerHTML = `
+            <p class="text-neutral-950 text-xl font-bold">${donateFloodInput} Taka is Donated for famine-2024 at Noakhali, Bangladesh</p>
+
+            <p class="text-base text-neutral-500">Date: ${new Date().toString()}</p>
+        `
+
+        document.getElementById("history-list").appendChild(div);
+
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal();
+
 });
 
 const feniFloodDonate = document.getElementById('feni-flood-donation-btn').addEventListener('click', function(event){
@@ -53,9 +66,23 @@ const feniFloodDonate = document.getElementById('feni-flood-donation-btn').addEv
 
     document.getElementById("feni-donate-flood-input").value = "";
 
+    const div = document.createElement('div');
+        div.classList.add("border-2", "p-5", 'rounded-2xl', 'space-y-1');
+        div.innerHTML = `
+            <p class="text-neutral-950 text-xl font-bold">${feniFloodDonateInput} Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+
+            <p class="text-base text-neutral-500">Date: ${new Date().toString()}</p>
+        `
+
+        document.getElementById("history-list").appendChild(div);
+    
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal();
+
 });
 
-const quotaDonation = document.getElementById('quota-donate-btn').addEventListener('click', function(event){
+const quotaDonation = document.getElementById('quota-donate-btn');
+quotaDonation.addEventListener('click', function(event){
     event.preventDefault();
     const quotaDonateInput = getInputFieldValueById('quota-donate-input');
     const quotaDonation = getTextValueById('quota-donation');
@@ -81,4 +108,48 @@ const quotaDonation = document.getElementById('quota-donate-btn').addEventListen
     document.getElementById('storage-value').innerText = storageDonateValue;
 
     document.getElementById("quota-donate-input").value = "";
+
+    const div = document.createElement('div');
+        div.classList.add("border-2", "p-5", 'rounded-2xl', 'space-y-1');
+        div.innerHTML = `
+            <p class="text-neutral-950 text-xl font-bold">${quotaDonateInput} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+
+            <p class="text-base text-neutral-500">Date: ${new Date().toString()}</p>
+        `
+
+        document.getElementById("history-list").appendChild(div);
+
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal();
+});
+
+// toggle btn section
+
+const donationBtn = document.getElementById('donation-btn');
+donationBtn.addEventListener('click', function(){
+    donationBtn.classList.add('bg-[#B4F461]', 'text-neutral-950', 'hover:bg-[#B4F461]', 'hover:text-neutral-950');
+    donationBtn.classList.remove('bg-transparent', 'border-2', 'border-neutral-300', 'hover:bg-transparent');
+    document.getElementById('donation-part').classList.remove('hidden');
+    document.getElementById('history-part').classList.add('hidden');
+
+    historyBtn.classList.add('bg-transparent', 'border-2', 'border-neutral-300', 'hover:bg-transparent');
+    historyBtn.classList.remove('bg-[#B4F461]', 'text-neutral-950', 'hover:bg-[#B4F461]', 'hover:text-neutral-950');
+})
+
+
+
+const historyBtn = document.getElementById('history-btn');
+historyBtn.addEventListener('click', function(){
+    historyBtn.classList.add('bg-[#B4F461]', 'text-neutral-950', 'hover:bg-[#B4F461]', 'hover:text-neutral-950');
+    historyBtn.classList.remove('bg-transparent', 'border-2', 'border-neutral-300', 'hover:bg-transparent');
+    document.getElementById('donation-part').classList.add('hidden');
+    document.getElementById('history-part').classList.remove('hidden');
+
+    donationBtn.classList.add('bg-transparent', 'border-2', 'border-neutral-300', 'hover:bg-transparent');
+    donationBtn.classList.remove('bg-[#B4F461]', 'text-neutral-950', 'hover:bg-[#B4F461]', 'hover:text-neutral-950');
+});
+
+const blogBtn = document.getElementById('blog-btn');
+blogBtn.addEventListener('click', function(){
+    window.location.href = '/blogs.html';
 });
