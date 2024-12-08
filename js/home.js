@@ -7,7 +7,7 @@ const donateFlood = document.getElementById('donate-flood').addEventListener('cl
     // console.log(donateFloodInput,floodDonation);
 
     if(donateFloodInput <= 0 || isNaN(donateFloodInput)){
-        alert('please give use money from your kindness');
+        alert('please give us money from your kindness');
         return;
     }
 
@@ -46,7 +46,7 @@ const feniFloodDonate = document.getElementById('feni-flood-donation-btn').addEv
     const storageValue = getTextValueById('storage-value');
 
     if(feniFloodDonateInput <= 0 || isNaN(feniFloodDonateInput)){
-        alert('please give use money from your kindness');
+        alert('please give us money from your kindness');
         return;
     }
 
@@ -87,7 +87,7 @@ quotaDonation.addEventListener('click', function(event){
     const storageValue = getTextValueById('storage-value');
 
     if(quotaDonateInput <= 0 || isNaN(quotaDonateInput)){
-        alert('please give use money from your kindness');
+        alert('please give us money from your kindness');
         return;
     }
 
