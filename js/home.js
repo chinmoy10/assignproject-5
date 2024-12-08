@@ -19,10 +19,10 @@ const donateFlood = document.getElementById('donate-flood').addEventListener('cl
     }
     const storageDonateValue = storageValue - donateFloodInput;
 
-    document.getElementById('donation-value').innerText = totalFloodDonation;
-    document.getElementById('storage-value').innerText = storageDonateValue;
-
-    document.getElementById("donate-flood-input").value = "";
+    setResultValue('donation-value').innerText = totalFloodDonation;
+    setResultValue('storage-value').innerText = storageDonateValue;
+    
+    getInputValueEmptyId("donate-flood-input").value = "";
 
     const div = document.createElement('div');
         div.classList.add("border-2", "p-5", 'rounded-2xl', 'space-y-1');
@@ -32,7 +32,7 @@ const donateFlood = document.getElementById('donate-flood').addEventListener('cl
             <p class="text-base text-neutral-500">Date: ${new Date().toString()}</p>
         `
 
-        document.getElementById("history-list").appendChild(div);
+        document.getElementById("history-list").prepend(div);
 
     const modal = document.getElementById('my_modal_1');
     modal.showModal();
@@ -44,8 +44,6 @@ const feniFloodDonate = document.getElementById('feni-flood-donation-btn').addEv
     const feniFloodDonateInput = getInputFieldValueById("feni-donate-flood-input");
     const feniFloodDonation = getTextValueById("feni-donation-value");
     const storageValue = getTextValueById('storage-value');
-
-    // console.log(feniFloodDonateInput, feniFloodDonation, storageValue);
 
     if(feniFloodDonateInput <= 0 || isNaN(feniFloodDonateInput)){
         alert('please give use money from your kindness');
@@ -61,10 +59,10 @@ const feniFloodDonate = document.getElementById('feni-flood-donation-btn').addEv
 
     const storageDonateValue = storageValue - feniFloodDonateInput;
 
-    document.getElementById('feni-donation-value').innerText = totalFeniFloodDonation;
-    document.getElementById('storage-value').innerText = storageDonateValue;
+    setResultValue('feni-donation-value').innerText = totalFeniFloodDonation;
+    setResultValue('storage-value').innerText = storageDonateValue;
 
-    document.getElementById("feni-donate-flood-input").value = "";
+    getInputValueEmptyId("feni-donate-flood-input").value = "";
 
     const div = document.createElement('div');
         div.classList.add("border-2", "p-5", 'rounded-2xl', 'space-y-1');
@@ -74,7 +72,7 @@ const feniFloodDonate = document.getElementById('feni-flood-donation-btn').addEv
             <p class="text-base text-neutral-500">Date: ${new Date().toString()}</p>
         `
 
-        document.getElementById("history-list").appendChild(div);
+        document.getElementById("history-list").prepend(div);
     
     const modal = document.getElementById('my_modal_1');
     modal.showModal();
@@ -87,8 +85,6 @@ quotaDonation.addEventListener('click', function(event){
     const quotaDonateInput = getInputFieldValueById('quota-donate-input');
     const quotaDonation = getTextValueById('quota-donation');
     const storageValue = getTextValueById('storage-value');
-
-    // console.log(quotaDonateInput,quotaDonation,storageValue);
 
     if(quotaDonateInput <= 0 || isNaN(quotaDonateInput)){
         alert('please give use money from your kindness');
@@ -104,10 +100,10 @@ quotaDonation.addEventListener('click', function(event){
 
     const storageDonateValue = storageValue - quotaDonateInput;
 
-    document.getElementById('quota-donation').innerText = totalQuotaDonation;
-    document.getElementById('storage-value').innerText = storageDonateValue;
+    setResultValue('quota-donation').innerText = totalQuotaDonation;
+    setResultValue('storage-value').innerText = storageDonateValue;
 
-    document.getElementById("quota-donate-input").value = "";
+    getInputValueEmptyId("quota-donate-input").value = "";
 
     const div = document.createElement('div');
         div.classList.add("border-2", "p-5", 'rounded-2xl', 'space-y-1');
@@ -117,8 +113,8 @@ quotaDonation.addEventListener('click', function(event){
             <p class="text-base text-neutral-500">Date: ${new Date().toString()}</p>
         `
 
-        document.getElementById("history-list").appendChild(div);
-
+        document.getElementById("history-list").prepend(div);
+        
     const modal = document.getElementById('my_modal_1');
     modal.showModal();
 });
@@ -149,7 +145,16 @@ historyBtn.addEventListener('click', function(){
     donationBtn.classList.remove('bg-[#B4F461]', 'text-neutral-950', 'hover:bg-[#B4F461]', 'hover:text-neutral-950');
 });
 
+// page switch section
+
 const blogBtn = document.getElementById('blog-btn');
+const blogBtn2 = document.getElementById('blog-btn2');
+
 blogBtn.addEventListener('click', function(){
     window.location.href = '/blogs.html';
 });
+
+blogBtn2.addEventListener('click', function(){
+    window.location.href = '/blogs.html';
+});
+

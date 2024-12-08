@@ -29,33 +29,78 @@
 
 </head>
 <body class="lexend-font">
-    <header class="sticky top-0 bg-[#f9f7f3f6] shadow-sm">
-        <div class="bg-[#F9F7F3]">
-          <nav class="container mx-auto px-8 lg:py-3">
-            <div class="navbar">
-              <div class="navbar-start sm:flex-wrap">
-                <button id="home-btn" class="btn bg-[#B4F461] text-xl font-bold text-neutral-950 hover:bg-[#B4F461] hover:text-neutral-950"
-                  >Home</button>
-              </div>
-              <div class="navbar-center hidden md:block">
-                <div class="flex items-center gap-3">
-                  <img src="./images/logo.png" alt="" />
-                  <h1 class="text-xl font-bold text-neutral-950">
-                    Donate Bangladesh
-                  </h1>
-                </div>
-              </div>
-              <div class="navbar-end flex items-center gap-2">
+    <header class="bg-[#F9F7F3]">
+      <nav class="container mx-auto px-6 py-10 lg:py-3">
+        <div class="navbar">
+          <div class="navbar-start sm:flex-wrap">
+            <button id="home-btn" class="btn bg-[#B4F461] text-xl font-bold text-neutral-950 hover:bg-[#B4F461] hover:text-neutral-950"
+              >Home</button>
+          </div>
+          <div class="navbar-center">
+            <div class="flex items-center gap-3">
+              <img src="./images/logo.png" alt="" />
+              <h1 class="text-xl font-bold text-neutral-950">
+                Donate Bangladesh
+              </h1>
+            </div>
+          </div>
+          <div class="navbar-end w-0 md:w-1/2">
+            <div class="hidden md:block">
+              <div class="flex items-center gap-2">
                 <img src="./images/coin.png" alt="" />
                 <h2 id="storage-value" class="text-xl font-bold text-neutral-500">
                   5500 BDT
                 </h2>
               </div>
             </div>
-          </nav>
+          </div>
         </div>
+      </nav>
     </header>
+    <main class="container mx-auto px-10 lg:px-16 my-8 lg:my-16 space-y-8">
+      <h1 class="text-5xl font-extrabold text-neutral-950">Important FAQ</h1>
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-2xl font-bold">What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p class="text-lg text-neutral-600"><span class="font-bold">ANSWER: </span> The Document Object Model (DOM) is a programming interface used for web documents that represent the structure of an HTML page as a tree of objects.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-2xl font-bold">How do you select one element or more elements by DOM?</div>
+          <div class="collapse-content">
+            <p class="text-lg text-neutral-600"><span class="font-bold">ANSWER:</span><br>
+              <span class="font-semibold">For single element select, using two types:</span> <br>
+              1. document.getElementById("");<br>
+              2. document.querySelector("");<br><br>
+              <span class="font-semibold">For many elements select, using three types:</span><br>
+              1. document.getElementsByTagName("");<br>
+              2. document.getElementsByClassNam("");<br>
+              3. document.querySelectorAll(""); 
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-2xl font-bold">What is appendChild() in JavaScript?</div>
+          <div class="collapse-content">
+            <p class="text-lg text-neutral-600"><span class="font-bold">ANSWER: </span>The appendChild() method in JavaScript used to add a new node to an exiting parent node. It is generally used to dynamically modify the structure of an HTML document.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-2xl font-bold">What is showModal() method?</div>
+          <div class="collapse-content">
+            <p class="text-lg text-neutral-600"><span class="font-bold">ANSWER: </span>
+              The showModal() method is part of the HTMLDialogElement API and is used to display a dialog box in a modal state.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script src="./js/blogs.js"></script>
-    <script src="./js/home.js"></script>
 </body>
 </html>

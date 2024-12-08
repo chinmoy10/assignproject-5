@@ -10,3 +10,13 @@ function getTextValueById(id){
     const textValueNumber = parseFloat(textValue);
     return textValueNumber;
 }
+
+function getInputValueEmptyId(id){
+    const emptyInput = document.getElementById(id);
+    return emptyInput;
+}
+
+function setResultValue(id){
+    const resultValue = document.getElementById(id);
+    return resultValue;
+}
